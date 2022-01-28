@@ -2,55 +2,78 @@ import java.util.Scanner;
 public class Principal {
 	public static void main(String[] args) {
 		Scanner sc =new Scanner(System.in);
-		int numEquipos;
+		int numeroEquipos;
 		System.out.println("Introduce el número de equipos que quieres que tenga la liga: ");
-		numEquipos=sc.nextInt();
+		numeroEquipos=sc.nextInt();
+		int numeroJugadores;
+		System.out.println("Introduce el número de jugadores que quieres que tenga cada equipo: ");
+		numeroJugadores=sc.nextInt();
+		int jornadasSimular;
+		System.out.println("Introduce el número de jornadas que quieras avanzar: ");
+		jornadasSimular=sc.nextInt();
 		
-		int opcion=1;
-		while(opcion!=10) {
-			limpiarPantalla();
-			imprimirMenu();
-			System.out.println("Introduce la opción que quieras: ");
-			opcion=leerEntrada();
-			switch(opcion) {
-			case 1: 
-			// Avanzar Jornadas    //
-				break;
-			case 2: 
-				// Mostrar Clasificación    //
-				break;
-			case 3: 
-				// Mostar Calendario    //
-			break;
-			case 10:
-				System.out.println("Has salido con exito");
-			break;
-			default:
-				System.out.println("Esta opción no es valida");
-			}
-			if(opcion!=10) {
-			System.out.println();
-			System.out.println("Presiona una tecla para continuar");
-			pressenter();
-		}
-	}
+		
+		//Para opción de parar el programa
+		int jornadasAvanzar;
+		
+		
+		//Numero jornadas
+		int numJornadas=(numeroEquipos-1)*2;
+		
+		
+		
+//		int opcion=1;
+//		while(opcion!=10) {
+//			limpiarPantalla();
+//			imprimirMenu();
+//			System.out.println("Introduce la opción que quieras: ");
+//			opcion=leerEntrada();
+//			switch(opcion) {
+//			case 1: 
+//			// Avanzar Jornadas    //
+//				break;
+//			case 2: 
+//				// Mostrar Clasificación    //
+//				break;
+//			case 3: 
+//				// Mostar Calendario    //
+//			break;
+//			case 10:
+//				System.out.println("Has salido con exito");
+//			break;
+//			default:
+//				System.out.println("Esta opción no es valida");
+//			}
+//			if(opcion!=10) {
+//			System.out.println();
+//			System.out.println("Presiona una tecla para continuar");
+//			pressenter();
+//		}
+//	}
 		// TODO Auto-generated method stub
 		
 		//Crear una Lista de Equipo
 		
-//		int edad = (int) Math.floor(Math.random()*15)+4;
+		int edad = (int) Math.floor(Math.random()*15)+4;
 //		int numeroEquipos = (int) Math.floor(Math.random()*13)+4;
 //		Equipo[] listaEquipos = crearEquipos(numeroEquipos, edad);
 		
-		//Imprimimos los equipos
-//		System.out.println("Numero de equipos: "+numeroEquipos);
-//		for (Equipo e: listaEquipos) {
-//			System.out.println(e.getNombre());
-//		}
+//		Imprimimos los equipos
+		Equipo[] listaEquipos = crearEquipos(numeroEquipos,  edad);
+		System.out.println("Numero de equipos: "+numeroEquipos);
+		for (Equipo e: listaEquipos) {
+			System.out.println(e.getNombre());
+		}
 		
 
+		Jornada[] listaJornadas = crearJornadas(numJornadas);
+		for (Jornada e: listaJornadas) {
+			System.out.println("Jornada: "+numeroEquipos);
+			System.out.println(e.getNombre());
+		}
 		
-
+		
+		
 
 	}
 
@@ -60,7 +83,16 @@ public class Principal {
 	
 	
 	
-	
+	private static Jornada[] crearJornadas(int numeroJugadores, int edad, Equipo equipo) {
+		for (int i=0; i<numeroJugadores; i++) {
+			//Crear un Jugador
+			Jugador jug = new Jugador();
+			//Nombre
+			int numero = (int) Math.floor(Math.random()*nombres.length);
+			String nombre = nombres[numero];
+			jug.setNombre(nombre);
+	}
+	}
 	
 	
 	
