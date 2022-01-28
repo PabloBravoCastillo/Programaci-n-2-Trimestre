@@ -1,19 +1,52 @@
-
+import java.util.Scanner;
 public class Principal {
 	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		int numEquipos;
+		System.out.println("Introduce el número de equipos que quieres que tenga la liga: ");
+		numEquipos=sc.nextInt();
+		
+		int opcion=1;
+		while(opcion!=10) {
+			limpiarPantalla();
+			imprimirMenu();
+			System.out.println("Introduce la opción que quieras: ");
+			opcion=leerEntrada();
+			switch(opcion) {
+			case 1: 
+			// Avanzar Jornadas    //
+				break;
+			case 2: 
+				// Mostrar Clasificación    //
+				break;
+			case 3: 
+				// Mostar Calendario    //
+			break;
+			case 10:
+				System.out.println("Has salido con exito");
+			break;
+			default:
+				System.out.println("Esta opción no es valida");
+			}
+			if(opcion!=10) {
+			System.out.println();
+			System.out.println("Presiona una tecla para continuar");
+			pressenter();
+		}
+	}
 		// TODO Auto-generated method stub
 		
 		//Crear una Lista de Equipo
 		
-		int edad = (int) Math.floor(Math.random()*15)+4;
-		int numeroEquipos = (int) Math.floor(Math.random()*13)+4;
-		Equipo[] listaEquipos = crearEquipos(numeroEquipos, edad);
+//		int edad = (int) Math.floor(Math.random()*15)+4;
+//		int numeroEquipos = (int) Math.floor(Math.random()*13)+4;
+//		Equipo[] listaEquipos = crearEquipos(numeroEquipos, edad);
 		
 		//Imprimimos los equipos
-		System.out.println("Numero de equipos: "+numeroEquipos);
-		for (Equipo e: listaEquipos) {
-			System.out.println(e.getNombre());
-		}
+//		System.out.println("Numero de equipos: "+numeroEquipos);
+//		for (Equipo e: listaEquipos) {
+//			System.out.println(e.getNombre());
+//		}
 		
 
 		
@@ -21,6 +54,55 @@ public class Principal {
 
 	}
 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	private static void imprimirMenu() {
+		// TODO Auto-generated method stub
+	System.out.println("*****************************");
+	System.out.println("******Menu del Programa**************");
+	System.out.println("*****************************");
+	System.out.println("1-Avanzar Jornadas");
+	System.out.println("2-Mostrar Clasificación");
+	System.out.println("3-Mostrar Calendario");
+	System.out.println("10-Salir");
+	}
+	private static void limpiarPantalla() {
+		for(int i=1;i<200;i++) {
+		System.out.println();
+	}
+}
+
+	private static int leerEntrada() {
+		Scanner sc= new Scanner(System.in);
+		return sc.nextInt();
+	}
+	private static void pressenter() {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		sc.nextLine();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	private static Jugador[] crearJugadores(int numeroJugadores, int edad, Equipo equipo) {
 		//Listado de Nombres, Apellidos, Posiciones para generador random
 		String[] nombres = {"Antonio", "Pepito", "Alejandra", "Ismael", "Hugo", "Oliver","Kalesi",
