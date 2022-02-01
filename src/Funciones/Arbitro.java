@@ -1,3 +1,4 @@
+package Funciones;
 
 public class Arbitro extends Persona {
 	int licencia;

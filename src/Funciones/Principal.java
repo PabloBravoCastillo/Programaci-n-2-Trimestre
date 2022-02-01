@@ -1,16 +1,15 @@
+package Funciones;
 import java.util.Scanner;
 public class Principal {
 	public static void main(String[] args) {
 		Scanner sc =new Scanner(System.in);
-		int numeroEquipos;
+		
 		System.out.println("Introduce el número de equipos que quieres que tenga la liga: ");
-		numeroEquipos=sc.nextInt();
-		int numeroJugadores;
+		int numeroEquipos=sc.nextInt();
 		System.out.println("Introduce el número de jugadores que quieres que tenga cada equipo: ");
-		numeroJugadores=sc.nextInt();
-		int jornadasSimular;
+		int numeroJugadores=sc.nextInt();
 		System.out.println("Introduce el número de jornadas que quieras avanzar: ");
-		jornadasSimular=sc.nextInt();
+		int jornadasSimular=sc.nextInt();
 		
 		
 		//Para opción de parar el programa
@@ -18,7 +17,7 @@ public class Principal {
 		
 		
 		//Numero jornadas
-		int numJornadas=(numeroEquipos-1)*2;
+		
 		
 		
 		
@@ -66,11 +65,11 @@ public class Principal {
 		}
 		
 
-		Jornada[] listaJornadas = crearJornadas(numJornadas);
-		for (Jornada e: listaJornadas) {
-			System.out.println("Jornada: "+numeroEquipos);
-			System.out.println(e.getNombre());
-		}
+//		Jornada[] listaJornadas = CrearPartidoResultado(numJornadas);
+//		for (Jornada e: listaJornadas) {
+//			System.out.println("Jornada: "+numeroEquipos);
+//			System.out.println(e.getNombre());
+//		}
 		
 		
 		
@@ -83,16 +82,16 @@ public class Principal {
 	
 	
 	
-	private static Jornada[] crearJornadas(int numeroJugadores, int edad, Equipo equipo) {
-		for (int i=0; i<numeroJugadores; i++) {
-			//Crear un Jugador
-			Jugador jug = new Jugador();
-			//Nombre
-			int numero = (int) Math.floor(Math.random()*nombres.length);
-			String nombre = nombres[numero];
-			jug.setNombre(nombre);
-	}
-	}
+//	private static Jornada[] crearJornadas(int numeroJugadores, int edad, Equipo equipo) {
+//		for (int i=0; i<numeroJugadores; i++) {
+//			//Crear un Jugador
+//			Jugador jug = new Jugador();
+//			//Nombre
+//			int numero = (int) Math.floor(Math.random()*nombres.length);
+//			String nombre = nombres[numero];
+//			jug.setNombre(nombre);
+//	}
+//	}
 	
 	
 	

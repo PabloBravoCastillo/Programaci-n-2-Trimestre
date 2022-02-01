@@ -1,3 +1,4 @@
+package Funciones;
 public final class Jugador extends Persona{
 	private String categoria;
 	private String posicion;

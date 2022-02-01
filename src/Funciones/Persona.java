@@ -1,3 +1,4 @@
+package Funciones;
 
 public abstract class Persona {
 	private String nombre;

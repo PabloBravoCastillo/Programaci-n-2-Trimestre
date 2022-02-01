@@ -1,3 +1,4 @@
+package Funciones;
 
 public class Prueba {
 private static Equipo[] crearEquipos(int numeroEquipos,int edad) {

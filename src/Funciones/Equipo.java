@@ -1,3 +1,4 @@
+package Funciones;
 
 public class Equipo {
 	private String nombre;

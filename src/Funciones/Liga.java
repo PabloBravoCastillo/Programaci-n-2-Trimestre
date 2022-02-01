@@ -1,3 +1,4 @@
+package Funciones;
 
 public class Liga extends Equipo{
 	private String nombre;
