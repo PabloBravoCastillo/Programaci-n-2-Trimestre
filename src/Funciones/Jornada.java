@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Jornada {
 	//Ejercicio 1//
 	//vamos a crear un programa que genere los partidos a partir de un numero de equipo determinados.//
-	int numJornadas=(numeroEquipos-1)*2;
+	
 	
 
 		 

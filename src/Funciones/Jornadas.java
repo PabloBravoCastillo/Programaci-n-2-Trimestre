@@ -1,7 +1,9 @@
 package Funciones;
 
+import java.util.Scanner;
+
 public class Jornadas {
-	
+	Scanner sc =new Scanner(System.in);
 		 
 
 
