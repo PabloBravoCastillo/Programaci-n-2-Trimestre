@@ -3,12 +3,13 @@ package Funciones;
 import java.util.Scanner;
 
 public class Jornadas {
-	Scanner sc =new Scanner(System.in);
-		 
+	
+		public int introducirEquipo{ 
 
 
         // TODO Auto-generated method stub
         Scanner teclado=new Scanner(System.in);
+        
         System.out.println("Introduce el nombre del equipo 1");
         String equipo1=teclado.nextLine();
         System.out.println("Introduce el nombre del equipo 2");
@@ -33,8 +34,8 @@ public class Jornadas {
             partido++;
         }
 
-            
 }
+
 	
 	
 	
