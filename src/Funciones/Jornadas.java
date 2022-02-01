@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Jornadas {
 	
-		public int introducirEquipo{ 
+		public int introducirEquipo() { 
 
 
         // TODO Auto-generated method stub
@@ -30,7 +30,7 @@ public class Jornadas {
 
 
         }
-            System.out.println("Resultados del partido "+goles1+"-"+ goles2);
+           // System.out.println("Resultados del partido "+goles1+"-"+ goles2);
             partido++;
         }
 
