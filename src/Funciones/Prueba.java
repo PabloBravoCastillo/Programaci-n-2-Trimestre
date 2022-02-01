@@ -1,7 +1,7 @@
 package Funciones;
-import Funciones.Principal;
+
 public class Prueba {
-private static Equipo[] crearEquipos(it numeroEquipos,int edad) {
+private static Equipo[] crearEquipos(int numeroEquipos,int edad) {
 		
 		String [] nombreBarrios = {"El Candado", "Huelin", "Tiro Pichón", "Rincón de la Victoria", "La Rosaleda", "Torremolinos",
 				"Velez Málaga","Cerrado de Calderon", "El Puerto de la Torre", "Bresca", "Mezquitilla", "Teatinos", "Motril",
