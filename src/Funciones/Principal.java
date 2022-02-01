@@ -71,6 +71,31 @@ public class Principal {
 //			System.out.println(e.getNombre());
 //		}
 		
+		//Variable para probar
+		int numJornadas=0;
+		int mitadEquipos=0;
+		
+		// Generador partido de jornadas.
+//		int numJornadas=(numEquipos-1)*2;
+//		int mitadEquipos=numEquipos/2;
+		int numJornadasMitad=numJornadas/2;
+		for(int i=numJornadas;i<=numJornadas;i++) {
+			if(i<=numJornadasMitad) {
+			for(int j=0;j<numJornadas;j++) {
+				int numEquipoLocal=j;
+				int numEquipoVisitante=mitadEquipos+j;
+				crearPartido(numEquipoLocal, numEquipoVisitante);
+			}
+			}else {
+				for(int j=0;j<numJornadas;j++) {
+					crearPartido(numEquipoLocal, numEquipoVisitante);
+				}
+				
+			}
+		}
+		
+		
+		
 		Partido miPartido = new Partido();
 		
 		Equipo equipo1=listaEquipos[0];
