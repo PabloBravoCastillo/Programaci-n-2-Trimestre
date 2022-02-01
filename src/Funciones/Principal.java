@@ -71,7 +71,19 @@ public class Principal {
 //			System.out.println(e.getNombre());
 //		}
 		
+		Partido miPartido = new Partido();
 		
+		Equipo equipo1=listaEquipos[0];
+		Equipo equipo2=listaEquipos[1];
+		
+		int goles1 = (int) (Math.random()*10+1);
+        int goles2 = (int) (Math.random()*10+1);
+		
+		miPartido.setEquipoLocal(equipo1);
+		miPartido.setEquipoVisitante(equipo2);
+		miPartido.setGolesLocal(goles1);
+		miPartido.setGolesVisitante(goles2);
+		//miPartido.setArbitro();
 		
 
 	}

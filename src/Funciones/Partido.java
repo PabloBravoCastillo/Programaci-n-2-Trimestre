@@ -1,3 +1,4 @@
+package Funciones;
 public class Partido {
 	  private Equipo equipoLocal;
 	  private Equipo equipoVisitante;

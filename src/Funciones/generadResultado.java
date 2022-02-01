@@ -1,3 +1,4 @@
+package Funciones;
 import java.util.Scanner;
 
 public class generadResultado {
