@@ -81,13 +81,15 @@ public class Principal {
 		int numJornadasMitad=numJornadas/2;
 		for(int i=numJornadas;i<=numJornadas;i++) {
 			if(i<=numJornadasMitad) {
-			for(int j=0;j<numJornadas;j++) {
+			for(int j=0;j<mitadEquipos;j++) {
 				int numEquipoLocal=j;
 				int numEquipoVisitante=mitadEquipos+j;
 				crearPartido(numEquipoLocal, numEquipoVisitante);
 			}
 			}else {
-				for(int j=0;j<numJornadas;j++) {
+				for(int j=0;j<mitadEquipos;j++) {
+					int numEquipoLocal=mitadEquipos+j;
+					int numEquipoVisitante=j;
 					crearPartido(numEquipoLocal, numEquipoVisitante);
 				}
 				
