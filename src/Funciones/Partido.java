@@ -6,6 +6,12 @@ public class Partido {
 	  private int golesVisitante;
 	  private Arbitro arbitro;
 	  
+	  
+	  public Partido(Partido partidos) {
+		  
+		  
+	  }
+	  
 	public Equipo getEquipoLocal() {
 		return equipoLocal;
 	}
