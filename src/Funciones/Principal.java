@@ -10,10 +10,12 @@ public class Principal {
 		Liga miLiga = new Liga(crearEquipos(NoEQUIPOS,EDAD));
 		
 		for (Equipo Equiposliga: miLiga.getEquipos()) {
-			System.out.println(Equiposliga.ge());
+			System.out.println(Equiposliga.getNombre());
 			System.out.println(Equiposliga.getEntrenador());
 			for (Jugador j: Equiposliga.getJugadores()) {
-				System.out.println(j.getNombre());
+				System.out.println(" Nombre: " +j.getNombre());
+				System.out.println(" Edad: " +j.getEdad());
+				System.out.println(" Dorsal: " +j.getDorsal());
 			}
 		}
 		
