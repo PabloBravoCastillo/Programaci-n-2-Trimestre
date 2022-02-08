@@ -9,10 +9,10 @@ public class Principal {
 		final int NoEQUIPOS =20;
 		Liga miLiga = new Liga(crearEquipos(NoEQUIPOS,EDAD));
 		
-		for (Equipo e: miLiga.getEquipos()) {
-			System.out.println(e.getNombre());
-			System.out.println(e.getEntrenador());
-			for (Jugador j: e.getJugadores()) {
+		for (Equipo Equiposliga: miLiga.getEquipos()) {
+			System.out.println(Equiposliga.ge());
+			System.out.println(Equiposliga.getEntrenador());
+			for (Jugador j: Equiposliga.getJugadores()) {
 				System.out.println(j.getNombre());
 			}
 		}
