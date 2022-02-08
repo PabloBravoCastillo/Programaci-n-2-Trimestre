@@ -1,120 +1,146 @@
 package Funciones;
 import java.util.Scanner;
+import java.lang.Iterable;
 public class Principal {
 	public static void main(String[] args) {
-		Scanner sc =new Scanner(System.in);
 		
-		System.out.println("Introduce el número de equipos que quieres que tenga la liga: ");
-		int numeroEquipos=sc.nextInt();
-		System.out.println("Introduce el número de jugadores que quieres que tenga cada equipo: ");
-		int numeroJugadores=sc.nextInt();
-		System.out.println("Introduce el número de jornadas que quieras avanzar: ");
-		int jornadasSimular=sc.nextInt();
+		//Me voy a crear una liga
+		final int EDAD = 14;
+		final int NoEQUIPOS =20;
+		Liga miLiga = new Liga(crearEquipos(NoEQUIPOS,EDAD));
 		
-		
-		//Para opción de parar el programa
-		int jornadasAvanzar;
-		
-		
-		//Numero jornadas
-		
-		
-		
-		
-//		int opcion=1;
-//		while(opcion!=10) {
-//			limpiarPantalla();
-//			imprimirMenu();
-//			System.out.println("Introduce la opción que quieras: ");
-//			opcion=leerEntrada();
-//			switch(opcion) {
-//			case 1: 
-//			// Avanzar Jornadas    //
-//				break;
-//			case 2: 
-//				// Mostrar Clasificación    //
-//				break;
-//			case 3: 
-//				// Mostar Calendario    //
-//			break;
-//			case 10:
-//				System.out.println("Has salido con exito");
-//			break;
-//			default:
-//				System.out.println("Esta opción no es valida");
-//			}
-//			if(opcion!=10) {
-//			System.out.println();
-//			System.out.println("Presiona una tecla para continuar");
-//			pressenter();
-//		}
-//	}
-		// TODO Auto-generated method stub
-		
-		//Crear una Lista de Equipo
-		
-		int edad = (int) Math.floor(Math.random()*15)+4;
-//		int numeroEquipos = (int) Math.floor(Math.random()*13)+4;
-//		Equipo[] listaEquipos = crearEquipos(numeroEquipos, edad);
-		
-//		Imprimimos los equipos
-		Equipo[] listaEquipos = crearEquipos(numeroEquipos,  edad);
-		System.out.println("Numero de equipos: "+numeroEquipos);
-		for (Equipo e: listaEquipos) {
+		for (Equipo e: miLiga.getEquipos()) {
 			System.out.println(e.getNombre());
+			System.out.println(e.getEntrenador());
+			for (Jugador j: e.getJugadores()) {
+				System.out.println(j.getNombre());
+			}
 		}
 		
-
-//		Jornada[] listaJornadas = CrearPartidoResultado(numJornadas);
-//		for (Jornada e: listaJornadas) {
-//			System.out.println("Jornada: "+numeroEquipos);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		Scanner sc =new Scanner(System.in);
+//		
+//		System.out.println("Introduce el número de equipos que quieres que tenga la liga: ");
+//		int numeroEquipos=sc.nextInt();
+//		System.out.println("Introduce el número de jugadores que quieres que tenga cada equipo: ");
+//		int numeroJugadores=sc.nextInt();
+//		System.out.println("Introduce el número de jornadas que quieras avanzar: ");
+//		int jornadasSimular=sc.nextInt();
+//		
+//		
+//		//Para opción de parar el programa
+//		int jornadasAvanzar;
+//		
+//		
+//		//Numero jornadas
+//		
+//		
+//		
+//		
+////		int opcion=1;
+////		while(opcion!=10) {
+////			limpiarPantalla();
+////			imprimirMenu();
+////			System.out.println("Introduce la opción que quieras: ");
+////			opcion=leerEntrada();
+////			switch(opcion) {
+////			case 1: 
+////			// Avanzar Jornadas    //
+////				break;
+////			case 2: 
+////				// Mostrar Clasificación    //
+////				break;
+////			case 3: 
+////				// Mostar Calendario    //
+////			break;
+////			case 10:
+////				System.out.println("Has salido con exito");
+////			break;
+////			default:
+////				System.out.println("Esta opción no es valida");
+////			}
+////			if(opcion!=10) {
+////			System.out.println();
+////			System.out.println("Presiona una tecla para continuar");
+////			pressenter();
+////		}
+////	}
+//		// TODO Auto-generated method stub
+//		
+//		//Crear una Lista de Equipo
+//		
+//		int edad = (int) Math.floor(Math.random()*15)+4;
+////		int numeroEquipos = (int) Math.floor(Math.random()*13)+4;
+////		Equipo[] listaEquipos = crearEquipos(numeroEquipos, edad);
+//		
+////		Imprimimos los equipos
+//		Equipo[] listaEquipos = crearEquipos(numeroEquipos,  edad);
+//		System.out.println("Numero de equipos: "+numeroEquipos);
+//		for (Equipo e: listaEquipos) {
 //			System.out.println(e.getNombre());
 //		}
-		
-		//Variable para probar
-		int numJornadas=0;
-		int mitadEquipos=0;
-		
-		// Generador partido de jornadas.
-//		int numJornadas=(numEquipos-1)*2;
-//		int mitadEquipos=numEquipos/2;
-		int numJornadasMitad=numJornadas/2;
-		for(int i=numJornadas;i<=numJornadas;i++) {
-			if(i<=numJornadasMitad) {
-			for(int j=0;j<mitadEquipos;j++) {
-				int numEquipoLocal=j;
-				int numEquipoVisitante=mitadEquipos+j;
-				crearPartido(numEquipoLocal, numEquipoVisitante);
-			}
-			}else {
-				for(int j=0;j<mitadEquipos;j++) {
-					int numEquipoLocal=mitadEquipos+j;
-					int numEquipoVisitante=j;
-					crearPartido(numEquipoLocal, numEquipoVisitante);
-				}
-				
-			}
-		}
-		
-		
-		
-		Partido miPartido = new Partido();
-		
-		Equipo equipo1=listaEquipos[0];
-		Equipo equipo2=listaEquipos[1];
-		
-		int goles1 = (int) (Math.random()*10+1);
-        int goles2 = (int) (Math.random()*10+1);
-		
-		miPartido.setEquipoLocal(equipo1);
-		miPartido.setEquipoVisitante(equipo2);
-		miPartido.setGolesLocal(goles1);
-		miPartido.setGolesVisitante(goles2);
-		//miPartido.setArbitro();
+//		
+//
+////		Jornada[] listaJornadas = CrearPartidoResultado(numJornadas);
+////		for (Jornada e: listaJornadas) {
+////			System.out.println("Jornada: "+numeroEquipos);
+////			System.out.println(e.getNombre());
+////		}
+//		
+//		//Variable para probar
+//		int numJornadas=0;
+//		int mitadEquipos=0;
+//		
+//		// Generador partido de jornadas.
+////		int numJornadas=(numEquipos-1)*2;
+////		int mitadEquipos=numEquipos/2;
+//		int numJornadasMitad=numJornadas/2;
+//		for(int i=numJornadas;i<=numJornadas;i++) {
+//			if(i<=numJornadasMitad) {
+//			for(int j=0;j<mitadEquipos;j++) {
+//				int numEquipoLocal=j;
+//				int numEquipoVisitante=mitadEquipos+j;
+//				crearPartido(numEquipoLocal, numEquipoVisitante);
+//			}
+//			}else {
+//				for(int j=0;j<mitadEquipos;j++) {
+//					int numEquipoLocal=mitadEquipos+j;
+//					int numEquipoVisitante=j;
+//					crearPartido(numEquipoLocal, numEquipoVisitante);
+//				}
+//				
+//			}
+//		}
+//		
+//		
+//		
+//		Partido miPartido = new Partido();
+//		
+//		Equipo equipo1=listaEquipos[0];
+//		Equipo equipo2=listaEquipos[1];
+//		
+//		int goles1 = (int) (Math.random()*10+1);
+//        int goles2 = (int) (Math.random()*10+1);
+//		
+//		miPartido.setEquipoLocal(equipo1);
+//		miPartido.setEquipoVisitante(equipo2);
+//		miPartido.setGolesLocal(goles1);
+//		miPartido.setGolesVisitante(goles2);
+//		//miPartido.setArbitro();
 		
 
 	}
 
+	
+	
 	
 	
 	
