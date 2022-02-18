@@ -1,32 +1,45 @@
 package Funciones;
-import java.util.Scanner;
-public class Jornada {
 
+import java.util.Arrays;
+
+public class Jornada {
 	private Partido[] partidos;
-	
-	
-	
-	public Jornada (Partido[] partidos) {
-		this.partidos=partidos;
-		generarJornada();
-	}
-	
-	private void generarJornada() {
-		//Para sacar las jornadas necesito traerme todos los equipos
-		
-		//Partido[] partidos = partidos.get();
-	}
-	
-	
+	private boolean terminada=false;
+
 	public Partido[] getPartidos() {
 		return partidos;
 	}
+
 	public void setPartidos(Partido[] partidos) {
 		this.partidos = partidos;
 	}
 	
+	
+
+	public boolean isTerminada() {
+		return terminada;
+	}
+
+	public void setTerminada(boolean terminada) {
+		this.terminada = terminada;
 	}
 	
+	public void terminar() {
+		this.terminada=true;
+	}
+
+	@Override
+	public String toString() {
+		String cadena = "Jornada: \n";
+		for (int i=0;i<this.partidos.length;i++)
+		{
+			cadena+=this.partidos[i];
+		}
+
+		return cadena;
+	}
+}
+
 	
 	
 	
