@@ -2,6 +2,16 @@ package Funciones;
 import java.util.Scanner;
 
 public class Jornadas {
+	private Partido[]partidos;
+
+	public Partido[] getPartidos() {
+		return partidos;
+	}
+
+	public void setPartidos(Partido[] partidos) {
+		this.partidos = partidos;
+	}
+	
 	
 	
 	
