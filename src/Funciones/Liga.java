@@ -7,11 +7,15 @@ public class Liga{
 	private Arbitro[] arbitros;
 	private Clasificacion clasificacion;
 	
-	public Liga (Equipo[] equipos) {
+	public Liga(String nombre,Equipo[]misEquipos,Arbitro[]arbitros) {
+		
+		this.nombre=nombre;
 		this.equipos=equipos;
-		this.calendario = new Calendario(this);
+		this.arbitros=arbitros;
 		
 	}
+	
+
 	
 	
 	

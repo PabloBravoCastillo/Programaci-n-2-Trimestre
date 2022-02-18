@@ -12,6 +12,24 @@ public class Calendario {
 		jornadas = new Jornada[numeroJornadas];
 		
 		Equipo[][]emparejamientos=new Equipo[2][numeroPartidos];
+		//mitad izquierda del array doble
+		for (int i=0;i<numeroPartidos;i++) {
+			emparejamientos[0][i]=equipos[i];
+		}
+		//mitad derecha del array doble
+		for(int j=numeroPartidos-1;j>=0;j--){
+			emparejamientos[1][j]=equipos[numeroEquipos-1-j];
+		}
+		for(int i=0; i<numeroJornadas/2; i++) {
+			Partido[]partidosIda =new Partido
+			
+			
+			
+			
+			//Partidos de ida
+			partidosIda[j].setLocal(emparejamientos[0][j]);
+			
+		}
 		
 	}
 
