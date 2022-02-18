@@ -82,28 +82,49 @@ public class Calendario {
 				jornadas[numeroJornadas-1-i].setPartidos(partidosVuelta);
 			}
 			//Rotamos el array doble
-			Equipo[][]auxEmp=new Equipo[2][numeroPartidos];
-			//actualizamos columna izquierda
-			for(int k=0;k<numeroPartidos;k++) {
-				if(k==0) {
+			Equipo[][] auxEmp = new Equipo[2][numeroPartidos];
+			//Actualizamos columna izquierda
+			for (int k=0;k<numeroPartidos;k++) {
+				if (k==0) {
 					auxEmp[0][k]=emparejamientos[0][k];
 				}else if(k>0 && k<numeroPartidos-1) {
 					auxEmp[0][k+1]=emparejamientos[0][k];
-					}else {
-						auxEmp[1][k]=emparejamientos[0][k];
-					}
-					}
-			 //Columna Derecha
-			for(int k=0;k<numeroPartidos;k++) {
-				if(k>0 && k<numeroPartidos-1) {
+				}else {
+					auxEmp[1][k]=emparejamientos[0][k];
+				}
+			}
+			//Columna Derecha
+			for (int k=0;k<numeroPartidos;k++) {
+				if (k>0 && k<numeroPartidos) {
 					auxEmp[1][k-1]=emparejamientos[1][k];
 				}else {
 					auxEmp[0][1]=emparejamientos[1][k];
 				}
 			}
-				}
+			emparejamientos=auxEmp;
+		}
 	
-			
+
+	public Jornada[] getJornadas() {
+		return jornadas;
+	}
+
+	public void setJornadas(Jornada[] jornadas) {
+		this.jornadas = jornadas;
+	}
+
+	@Override
+	public String toString() {
+		String cadena = "Calendario de Liga: \n";
+		for (int i=0;i<this.jornadas.length;i++)
+		{
+			cadena+=(i+1)+"ª "+this.jornadas[i]+"\n";
+		}
+		
+		return cadena;
+	}
+	
+
 				
 			
 			
@@ -120,13 +141,13 @@ public class Calendario {
 //	public void setLiga(Liga liga) {
 //		this.liga = liga;
 //	}
-	public Jornada[] getJornadas() {
-		return jornadas;
-	}
-
-	public void setJornadas(Jornada[] jornadas) {
-		this.jornadas = jornadas;
-	}
+//	public Jornada[] getJornadas() {
+//		return jornadas;
+//	}
+//
+//	public void setJornadas(Jornada[] jornadas) {
+//		this.jornadas = jornadas;
+	
 
 }
 	
