@@ -3,12 +3,25 @@ import java.util.Scanner;
 import java.lang.Iterable;
 public class Principal {
 	public static void main(String[] args) {
+		final int EDAD = 14;
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Introduce el número de equipos que quieres que tenga la liga: ");
+		int numeroEquipos=sc.nextInt();
+		System.out.println("Introduce el número de jugadores que quieres que tenga cada equipo: ");
+		int numeroJugadores=sc.nextInt();
+		System.out.println("Introduce el número de jornadas que quieras avanzar: ");
+		int jornadasSimular=sc.nextInt();
+		
+		
+		Equipo[] misEquipos = crearListaEquipos(numeroEquipos, EDAD);
+		
+		
 		
 		//Me voy a crear una liga
-		final int EDAD = 14;
-		final int NoEQUIPOS =20;
-		Liga miLiga = new Liga(crearEquipos(NoEQUIPOS,EDAD));
 		
+		
+		Liga miLiga = new Liga(nombre,misEquipos,arbitros);
+		crearEquipos(numeroEquipos,EDAD,numeroJugadores);
 		for (Equipo Equiposliga: miLiga.getEquipos()) {
 			System.out.println(Equiposliga.getJugadores());
 			System.out.println(Equiposliga.getEntrenador());
@@ -26,14 +39,9 @@ public class Principal {
 		
 		
 		
-//		Scanner sc =new Scanner(System.in);
+
 //		
-//		System.out.println("Introduce el número de equipos que quieres que tenga la liga: ");
-//		int numeroEquipos=sc.nextInt();
-//		System.out.println("Introduce el número de jugadores que quieres que tenga cada equipo: ");
-//		int numeroJugadores=sc.nextInt();
-//		System.out.println("Introduce el número de jornadas que quieras avanzar: ");
-//		int jornadasSimular=sc.nextInt();
+//		
 //		
 //		
 //		//Para opción de parar el programa
@@ -76,11 +84,8 @@ public class Principal {
 //		// TODO Auto-generated method stub
 //		
 //		//Crear una Lista de Equipo
-//		
-//		int edad = (int) Math.floor(Math.random()*15)+4;
-////		int numeroEquipos = (int) Math.floor(Math.random()*13)+4;
-////		Equipo[] listaEquipos = crearEquipos(numeroEquipos, edad);
-//		
+
+		
 ////		Imprimimos los equipos
 //		Equipo[] listaEquipos = crearEquipos(numeroEquipos,  edad);
 //		System.out.println("Numero de equipos: "+numeroEquipos);
@@ -147,6 +152,21 @@ public class Principal {
 	
 	
 	
+private static Equipo[] crearListaEquipos(int numeroEquipos, int eDAD) {
+		// TODO Auto-generated method stub
+	
+	Equipo[] listaEquipos = crearEquipos(numeroEquipos, eDAD);
+	
+	}
+
+
+
+
+
+
+
+
+
 //	private static Jornada[] crearJornadas(int numeroJugadores, int edad, Equipo equipo) {
 //		for (int i=0; i<numeroJugadores; i++) {
 //			//Crear un Jugador
@@ -248,7 +268,7 @@ public class Principal {
 		return jugadores;
 	}
 
-	private static Equipo[] crearEquipos(int numeroEquipos,int edad) {
+	private static Equipo[] crearEquipos(int numeroEquipos,int edad, int numeroJugadores) {
 		
 		String [] nombreBarrios = {"El Candado", "Huelin", "Tiro PichÃ³n", "RincÃ³n de la Victoria", "La Rosaleda", "Torremolinos",
 				"Velez MÃ¡laga","Cerrado de Calderon", "El Puerto de la Torre", "Bresca", "Mezquitilla", "Teatinos", "Motril",
@@ -290,7 +310,7 @@ public class Principal {
 			equipo.setEntrenador(entrenador);
 			
 			//Meter los jugadores
-			int numeroJugadores=(int) Math.floor(Math.random()*7)+15;
+//			int numeroJugadores=(int) Math.floor(Math.random()*7)+15;
 			Jugador[] jugadores = crearJugadores(numeroJugadores,edad,equipo);
 			equipo.setJugadores(jugadores);
 			

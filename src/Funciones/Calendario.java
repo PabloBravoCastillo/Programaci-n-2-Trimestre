@@ -67,14 +67,14 @@ public class Calendario {
 				
 				for(int j=0; j<numeroPartidos;j++) {
 					//partidos de ida
-					PartidosIda[j].setEquipoLocal(emparejamientos[0][j]);
-					PartidosIda[j].setEquipoVisitante(emparejamientos[1][j]);
-					PartidosIda[j].setArbitro(arbitros[j]);
+					partidosIda[j].setEquipoLocal(emparejamientos[0][j]);
+					partidosIda[j].setEquipoVisitante(emparejamientos[1][j]);
+					partidosIda[j].setArbitro(arbitros[j]);
 					//partidos de vuelta
 					
-					PartidosVuelta[j].setEquipoLocal(emparejamientos[1][j]);
-					PartidosVuelta[j].setEquipoVisitante(emparejamientos[0][j]);
-					PartidosVuelta[j].setArbitro(arbitros[j]);
+					partidosVuelta[j].setEquipoLocal(emparejamientos[1][j]);
+					partidosVuelta[j].setEquipoVisitante(emparejamientos[0][j]);
+					partidosVuelta[j].setArbitro(arbitros[j]);
 				}
 				//actualizamos jornadas
 				jornadas[i]=new Jornada();
