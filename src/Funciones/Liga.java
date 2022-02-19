@@ -13,6 +13,9 @@ public class Liga{
 		this.equipos=equipos;
 		this.arbitros=arbitros;
 		
+		//Generador de Calendario
+		calendario=new Calendario(this.equipos,this.arbitros);
+		
 	}
 	
 
@@ -25,7 +28,7 @@ public class Liga{
 		
 	}
 	public void setNombre(String nombre) {
-		this.nombre = nombre;
+		this.nombre = nombre+"Liga Barrio.";
 	}
 	public Equipo[] getEquipos() {
 		return equipos;
